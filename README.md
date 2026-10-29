@@ -1,13 +1,17 @@
 # phplist-plugin-invite
 
-Invite people to join your phpList system.
+Invite people to double opt-in join your phpList system.
 
 v0.5 2026-09-22
 
 requires phpList version 3.0.3 or newer
 
-This plugin will use the campaign system to send a one-off invite to your subscribers. After that, phpList will ensure 
+This plugin will use the campaign system to send a one-off invite to your **already confirmed** subscribers. After that, phpList will ensure 
 further campaigns will only go out to subscribers who responded to the invite.
+
+Common use cases:
+1. After importing since importing auto-confirms the imported subscribers, while you may need or prefer manual confirmation.
+1. When regulation requires manual double opt-in.
 
 It does this as follows:
 
