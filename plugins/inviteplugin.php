@@ -57,7 +57,7 @@ class inviteplugin extends phplistPlugin
 
         $this->settings['inviteplugin_monitoring_column'] = array(
             'value' => '',
-            'description' => 'Select the "Re-asked to confirm" attribute (use a <b>hidden</b> attribute, you can create it <a href="?page=attributes">here</a>). If left on Default, the original unsubscribe behavior is used.',
+            'description' => 'Select the "Re-asked to confirm" attribute (use a <i>hidden</i> attribute, you can create it <a href="?page=attributes">here</a>). If left on Default, the original unsubscribe behavior is used.',
             'type' => 'select', 
             'values' => $attributeOptions,
             'allowempty' => 1,
