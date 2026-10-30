@@ -47,7 +47,7 @@ class inviteplugin extends phplistPlugin
         $attributeOptions = array('' => '-- Default: Use Original Unsubscribe Behavior --');
         
         if (isset($GLOBALS['tables']['attribute'])) {
-            $req = @Sql_Query("SELECT id, name FROM {$GLOBALS['tables']['attribute']} WHERE type IN ('textline', 'select', 'radio') ORDER BY name ASC");
+            $req = @Sql_Query("SELECT id, name FROM {$GLOBALS['tables']['attribute']} WHERE type = 'hidden' ORDER BY name ASC");
             if ($req) {
                 while ($row = Sql_Fetch_Assoc($req)) {
                     $attributeOptions[$row['id']] = $row['name'] . ' (ID: ' . $row['id'] . ')';
@@ -57,7 +57,7 @@ class inviteplugin extends phplistPlugin
 
         $this->settings['inviteplugin_monitoring_column'] = array(
             'value' => '',
-            'description' => 'Select the "Re-asked to confirm" attribute (use a textline attribute, you can create it <a href="?page=attributes">here</a>). If left on Default, the original unsubscribe behavior is used.',
+            'description' => 'Select the "Re-asked to confirm" attribute (use a <b>hidden</b> attribute, you can create it <a href="?page=attributes">here</a>). If left on Default, the original unsubscribe behavior is used.',
             'type' => 'select', 
             'values' => $attributeOptions,
             'allowempty' => 1,
