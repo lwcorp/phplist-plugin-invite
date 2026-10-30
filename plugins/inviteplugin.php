@@ -65,7 +65,7 @@ class inviteplugin extends phplistPlugin
         );
 
         $this->settings['inviteplugin_remind_min_time'] = array(
-            'value' => '1 week',
+            'value' => '1 day',
             'description' => 'Minimum unconfirmed time before allowing to remind',
             'type' => 'select',
             'values' => array(
@@ -152,7 +152,7 @@ class inviteplugin extends phplistPlugin
                     '1 month' => '1 MONTH',
                     '1 year' => '1 YEAR',
                 );
-                $sqlInterval = isset($intervals[$minTime]) ? $intervals[$minTime] : '1 WEEK';
+                $sqlInterval = isset($intervals[$minTime]) ? $intervals[$minTime] : '1 DAY';
 
                 // Find unconfirmed, non-blacklisted users on the target lists older than the minimum time
                 // whose attribute is either empty or already 'pending' (not 'manually asked')
