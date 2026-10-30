@@ -69,6 +69,7 @@ class inviteplugin extends phplistPlugin
             'description' => 'Minimum unconfirmed time before allowing to remind',
             'type' => 'select',
             'values' => array(
+                'no minimum' => 'No minimum (risky, best used only for testing)',
                 '1 day' => '1 day',
                 '1 week' => '1 week',
                 '1 month' => '1 month',
@@ -147,6 +148,7 @@ class inviteplugin extends phplistPlugin
             if (!empty($monitorAttrId) && is_numeric($monitorAttrId)) {
                 $minTime = getConfig('inviteplugin_remind_min_time');
                 $intervals = array(
+                    'no minimum' => '0 SECOND',
                     '1 day' => '1 DAY',
                     '1 week' => '1 WEEK',
                     '1 month' => '1 MONTH',
