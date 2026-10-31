@@ -1,15 +1,16 @@
 # phplist-plugin-invite
 
-Invite people to double opt-in join your phpList system.
+1. Invite people to double opt-in join your phpList system.
+2. Remind unconfirmed users to confirm (with a definable period of minimum time after they didn't confirm before they can be reminded).
 
 v0.5 2026-09-22
 
 requires phpList version 3.0.3 or newer
 
-This plugin will use the campaign system to send a one-off invite to your **already confirmed** subscribers. After that, phpList will ensure 
+This plugin will use the campaign system to send a one-off invite or reminder to subscribers. After that, phpList will ensure 
 further campaigns will only go out to subscribers who responded to the invite.
 
-Common use cases:
+Common use cases for double opt-in:
 1. After importing since importing auto-confirms the imported subscribers, while you may need or prefer manual confirmation.
 1. When regulation requires manual double opt-in.
 
